@@ -33,6 +33,6 @@ jobs:
       with:
         name: macos-arm64
         path: |
-          output
+          ~/output
 
   
