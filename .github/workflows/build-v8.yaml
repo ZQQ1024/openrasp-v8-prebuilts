@@ -6,6 +6,7 @@ on:
     paths:
     - 'V8_VERSION'
     - '.github/workflows/build-v8.yml'
+    - 'v8-macos.sh'
 
 jobs:
   version_reader:
