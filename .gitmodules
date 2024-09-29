@@ -1,0 +1,12 @@
+[submodule "cpr"]
+	path = cpr
+	url = https://github.com/libcpr/cpr.git
+[submodule "openssl"]
+	path = openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "curl"]
+	path = curl
+	url = https://github.com/curl/curl.git
+[submodule "zlib"]
+	path = zlib
+	url = https://github.com/madler/zlib.git
