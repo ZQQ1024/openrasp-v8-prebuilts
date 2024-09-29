@@ -4,7 +4,7 @@ on:
   push:
     branches: [ main ]
     paths:
-    - 'build.yaml'
+    - '.github/workflows/build.yaml'
     - 'other-macos.sh'
   
 jobs:
