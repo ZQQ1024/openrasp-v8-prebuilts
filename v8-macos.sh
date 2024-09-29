@@ -37,6 +37,8 @@ EOF
 gn gen out/monolith.macos.arm64
 ninja -C out/monolith.macos.arm64 -j 8 v8_monolith
 
+cd ~
+
 mkdir -p output/macos.arm64
 
 cp -r v8/include output/include
