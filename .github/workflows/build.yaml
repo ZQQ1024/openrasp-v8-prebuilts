@@ -20,9 +20,10 @@ jobs:
         run: |
           git submodule update --init --recursive
 
-      - name: Install dependencies
-        run: |
-        brew update && brew install curl openssl zlib
+      # - name: Install dependencies
+      #   run: |
+      #     brew update
+      #     brew install curl openssl zlib
 
       - name: Run Compilation Script
         run: bash other-macos.sh
