@@ -5,7 +5,7 @@ on:
     branches: [ main ]
     paths:
     - 'V8_VERSION'
-    - '.github/workflows/build-v8.yml'
+    - '.github/workflows/build-v8.yaml'
     - 'v8-macos.sh'
 
 jobs:
