@@ -1,0 +1,51 @@
+name: Build zlib/openssl/curl/cpr
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+    - '.github/workflows/build-other.yaml'
+    - 'script/**/*'
+  
+jobs:
+  build_macos_arm64:
+    name: macos-arm64
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Checkout submodules
+        run: |
+          git submodule update --init --recursive
+
+      - name: Run CPR Compilation Script
+        run: bash script/macos/cpr.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-arm64
+          path: artifacts/
+
+  build_macos_amd64:
+    name: macos-amd64
+    runs-on: macos-13
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Checkout submodules
+        run: |
+          git submodule update --init --recursive
+
+      - name: Run CPR Compilation Script
+        run: bash script/macos/cpr.sh
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-amd64
+          path: artifacts/

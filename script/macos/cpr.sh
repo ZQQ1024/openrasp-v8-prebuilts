@@ -1,9 +1,6 @@
 #!/bin/bash
 
-# Exit if any command fails
 set -e
-
-PREFIX=$HOME/libs
 
 # Compile cpr
 echo "Compiling CPR..."

@@ -14,12 +14,10 @@ cd ~/v8
 git checkout $VERSION
 gclient sync
 
-mkdir -p out/monolith.macos.arm64
+mkdir -p out/monolith.macos
 
 echo "=====[ Building V8 ]====="
-cat > out/monolith.macos.arm64/args.gn <<EOF
-target_os = "mac"
-target_cpu = "arm64"
+cat > out/monolith.macos/args.gn <<EOF
 is_debug = false
 symbol_level = 0
 is_component_build = false
@@ -34,13 +32,13 @@ v8_enable_shared_ro_heap = true
 use_custom_libcxx = false
 EOF
 
-gn gen out/monolith.macos.arm64
-ninja -C out/monolith.macos.arm64 -j 8 v8_monolith
+gn gen out/monolith.macos
+ninja -C out/monolith.macos -j 8 v8_monolith
 
 cd ~
 
-mkdir -p output/macos.arm64
+mkdir -p output/macos
 
 cp -r v8/include output/include
 
-cp v8/out/monolith.macos.arm64/obj/libv8_monolith.a output/macos.arm64/libv8_monolith.a
+cp v8/out/monolith.macos/obj/libv8_monolith.a output/macos/libv8_monolith.a
