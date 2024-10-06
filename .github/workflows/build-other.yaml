@@ -6,6 +6,10 @@ on:
     paths:
     - '.github/workflows/build-other.yaml'
     - 'script/**/*'
+    - 'cpr/**/*'
+    - 'curl/**/*'
+    - 'openssl/**/*'
+    - 'zlib/**/*'
   
 jobs:
   build_macos_arm64:
