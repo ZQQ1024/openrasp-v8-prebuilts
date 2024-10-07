@@ -16,6 +16,5 @@ cp cpr/build/lib/libcpr.a artifacts/lib64/
 cp -r cpr/include/ artifacts/include/
 
 cd artifacts
-ln -s lib64 lib
 
 echo "Compilation finished successfully."
