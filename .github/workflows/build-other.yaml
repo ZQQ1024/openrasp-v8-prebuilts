@@ -27,6 +27,9 @@ jobs:
       - name: Run CPR Compilation Script
         run: bash script/macos/cpr.sh
 
+      - name: Run Catch2 Compilation Script
+        run: bash script/macos/catch2.sh
+
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
         with:
@@ -47,6 +50,9 @@ jobs:
 
       - name: Run CPR Compilation Script
         run: bash script/macos/cpr.sh
+
+      - name: Run Catch2 Compilation Script
+        run: bash script/macos/catch2.sh
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
